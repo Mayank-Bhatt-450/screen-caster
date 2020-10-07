@@ -1,0 +1,23 @@
+   <html>
+   <body>
+  <img id="profileImage" src="data:image/jpg;base64, [your byte array]">
+yooo
+        <script >
+
+fetch('http://127.0.0.1:8000/h/')
+.then(result=>
+{
+	console.log(result.body);
+	return result.json();
+})
+.then(data =>{
+	console.log(data)
+	document.getElementById('profileImage').src="data:image/jpg;base64,"+data.picture.imgarray
+})
+.catch(error => console.log(error))
+async function yolo(){
+const da=await 
+}
+</script>
+    </body>
+</html>

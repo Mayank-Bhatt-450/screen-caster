@@ -1,0 +1,83 @@
+   <html>
+   <body>
+
+        <script >
+/*
+fetch('http://127.0.0.1:8000/h/')
+.then(result=>
+{
+	console.log(result);
+	return result;
+})
+.then(data =>{
+	console.log(data)
+}
+)
+.catch(error => console.log(error))*/
+function request_3(){
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "http://example.com", true);
+  xhr.onreadystatechange = function(r) {
+  console.log('cfvgfh-',xhr.responseText);
+  };
+  xhr.send();
+
+
+};
+function request_2(){
+  fetch('http://127.0.0.1:8000/h/', {
+  mode: 'cors',
+  credentials: 'include'
+})
+  //fetch('https://inshorts.com/en/read', {mode:'cors'})
+  .then(data => {
+                // console.log(data);
+
+                console.log(data);
+            })
+  .catch(error => console.log(error));
+};
+
+
+function request_1(){
+
+  const xhr = new XMLHttpRequest();
+  const url = 'http://127.0.0.1:8000/h/';
+
+  xhr.open('GET', url);
+
+  xhr.onreadystatechange = function(r){
+    console.log(r);
+  };
+  xhr.send();
+};
+function request4(){
+fetch('http://127.0.0.1:8000/h/')
+.then(result=>
+{
+	console.log(result);
+	return result.json();
+})
+.then(data =>{
+	console.log(data)
+}
+)
+.catch(error => console.log(error))
+
+};
+function main(){
+//request_1();
+//request_2();
+//request_3();
+request4();
+
+};
+main();
+</script>
+<form enctype="multipart/form-data" method="POST">
+          {% csrf_token %}
+          {{ f1.as_p }}
+          <input type="submit" name="" value="login">
+</form>
+    </body>
+</html>
